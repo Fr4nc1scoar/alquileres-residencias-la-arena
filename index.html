@@ -114,17 +114,16 @@
     />
     <div class="panoramic-hero-overlay"></div>
 
-    <!-- Píldoras discretas flotantes en las esquinas superiores -->
-    <div class="absolute top-3 left-3 sm:top-5 sm:left-6 z-10">
-      <div id="hero-status-badge" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md bg-emerald-500/30 text-emerald-200 border border-emerald-400/50 shadow-md pulse-available">
-        <span id="hero-status-text">🟢 Disponible para Reservas</span>
+    <!-- Barra superior flotante (sin colisiones en móvil) -->
+    <div class="absolute top-3 left-3 right-3 sm:top-5 sm:left-6 sm:right-6 z-10 flex items-center justify-between gap-2">
+      <div id="hero-status-badge" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wide backdrop-blur-md bg-emerald-500/30 text-emerald-200 border border-emerald-400/50 shadow-md pulse-available whitespace-nowrap">
+        <span id="hero-status-text"><span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping inline-block mr-1"></span>Disponible<span class="hidden sm:inline"> para Reservas</span></span>
       </div>
-    </div>
 
-    <div class="absolute top-3 right-3 sm:top-5 sm:right-6 z-10">
-      <button onclick="openLightboxBySrc('images/vista-panoramica-mar.jpg')" class="backdrop-blur-md bg-slate-900/65 hover:bg-slate-900/90 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold border border-white/20 shadow-md flex items-center gap-1.5 transition-all hover:scale-105">
+      <button onclick="openLightboxBySrc('images/vista-panoramica-mar.jpg')" class="backdrop-blur-md bg-slate-900/65 hover:bg-slate-900/90 text-white px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold border border-white/20 shadow-md flex items-center gap-1.5 transition-all hover:scale-105 whitespace-nowrap shrink-0">
         <i class="fa-solid fa-expand text-sky-400"></i>
-        <span>Ver Foto Completa HD</span>
+        <span class="sm:hidden">Ampliar HD</span>
+        <span class="hidden sm:inline">Ver Foto Completa HD</span>
       </button>
     </div>
 

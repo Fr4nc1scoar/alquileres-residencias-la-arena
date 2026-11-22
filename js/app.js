@@ -64,14 +64,14 @@
   function renderState() {
     if (heroStatusBadge && heroStatusText) {
       if (appState.status === 'available') {
-        heroStatusBadge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md bg-emerald-500/25 text-emerald-300 border border-emerald-400/40 pulse-available';
-        heroStatusText.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block mr-1"></span> Disponible para Reservas';
+        heroStatusBadge.className = 'inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wide backdrop-blur-md bg-emerald-500/30 text-emerald-200 border border-emerald-400/50 shadow-md pulse-available whitespace-nowrap';
+        heroStatusText.innerHTML = '<span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping inline-block mr-1"></span>Disponible<span class="hidden sm:inline"> para Reservas</span>';
       } else if (appState.status === 'reserved') {
-        heroStatusBadge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md bg-amber-500/25 text-amber-300 border border-amber-400/40';
-        heroStatusText.innerHTML = '🟡 Reserva en Proceso / Consultar';
+        heroStatusBadge.className = 'inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wide backdrop-blur-md bg-amber-500/30 text-amber-200 border border-amber-400/50 shadow-md whitespace-nowrap';
+        heroStatusText.innerHTML = '🟡 En Proceso<span class="hidden sm:inline"> / Consultar</span>';
       } else {
-        heroStatusBadge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md bg-rose-500/25 text-rose-300 border border-rose-400/40';
-        heroStatusText.innerHTML = '🔴 Ocupado Actualmente / Consultar Fechas';
+        heroStatusBadge.className = 'inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wide backdrop-blur-md bg-rose-500/30 text-rose-200 border border-rose-400/50 shadow-md whitespace-nowrap';
+        heroStatusText.innerHTML = '🔴 Ocupado<span class="hidden sm:inline"> / Consultar Fechas</span>';
       }
     }
 
