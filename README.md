@@ -64,7 +64,7 @@ Desarrollada para compartir un enlace directo con clientes vía WhatsApp, Instag
 ### Opción 1: Servidor Integrado Node.js
 Ejecuta en la terminal de la carpeta del proyecto:
 ```bash
-node local-server.js
+node dev/local-server.js
 ```
 Abre tu navegador en:
 ```
