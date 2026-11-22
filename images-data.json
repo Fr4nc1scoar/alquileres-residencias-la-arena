@@ -1,0 +1,128 @@
+[
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.48 PM.jpeg",
+    "dest": "habitacion-principal.jpg",
+    "title": "Habitación Principal",
+    "cat": "habitaciones"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.49 PM (1).jpeg",
+    "dest": "cocina-moderna.jpg",
+    "title": "Cocina Totalmente Equipada",
+    "cat": "cocina"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.49 PM (2).jpeg",
+    "dest": "sala-estar.jpg",
+    "title": "Sala de Estar Moderna con A/A Central",
+    "cat": "sala"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.49 PM (3).jpeg",
+    "dest": "lavandero-tanque.jpg",
+    "title": "Área de Lavandero y Tanque 1.000 Lts",
+    "cat": "servicios"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.49 PM (4).jpeg",
+    "dest": "bano-1.jpg",
+    "title": "Baño Completo 1 (Mármol y Vidrio)",
+    "cat": "banos"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.49 PM.jpeg",
+    "dest": "comedor-vista-mar.jpg",
+    "title": "Comedor 6 Puestos con Vista al Mar",
+    "cat": "sala"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.50 PM (1).jpeg",
+    "dest": "habitacion-2.jpg",
+    "title": "Habitación Secundaria (2 Camas)",
+    "cat": "habitaciones"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.50 PM (2).jpeg",
+    "dest": "vista-panoramica-mar.jpg",
+    "title": "Imponente Vista al Mar Caribe y Playa Moreno",
+    "cat": "vistas"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.50 PM (3).jpeg",
+    "dest": "sala-comedor-vista.jpg",
+    "title": "Área Social Integrada con Vista Panorámica",
+    "cat": "sala"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.50 PM (4).jpeg",
+    "dest": "isla-cocina-sala.jpg",
+    "title": "Isla Desayunadora en Mármol",
+    "cat": "cocina"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.50 PM (5).jpeg",
+    "dest": "sala-angulo-mar.jpg",
+    "title": "Sala con Amplios Ventanales Panorámicos",
+    "cat": "sala"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.50 PM.jpeg",
+    "dest": "bano-2.jpg",
+    "title": "Baño Principal Suite de Lujo",
+    "cat": "banos"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.51 PM (1).jpeg",
+    "dest": "cocina-isla.jpg",
+    "title": "Cocina e Isla en Mármol Calacatta",
+    "cat": "cocina"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.51 PM (2).jpeg",
+    "dest": "vista-general-social.jpg",
+    "title": "Vista General del Apartamento",
+    "cat": "sala"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.51 PM (3).jpeg",
+    "dest": "habitacion-principal-2.jpg",
+    "title": "Habitación Principal (Detalle)",
+    "cat": "habitaciones"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.51 PM (4).jpeg",
+    "dest": "sala-vista-mar-vertical.jpg",
+    "title": "Área Social y Horizonte Marino",
+    "cat": "sala"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.51 PM (5).jpeg",
+    "dest": "collage-apartamento.jpg",
+    "title": "Mosaico Resumen del Apartamento",
+    "cat": "resumen"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.51 PM.jpeg",
+    "dest": "vista-mar-tibisay.jpg",
+    "title": "Vista hacia el Mar y Hotel Tibisay",
+    "cat": "vistas"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.52 PM (1).jpeg",
+    "dest": "normas-piscina.jpg",
+    "title": "Reglamento Oficial de la Piscina",
+    "cat": "normas"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.52 PM (2).jpeg",
+    "dest": "normas-apartamento.jpg",
+    "title": "Normas de Estadía y Contactos",
+    "cat": "normas"
+  },
+  {
+    "src": "WhatsApp Image 2026-11-22 at 12.03.52 PM.jpeg",
+    "dest": "wifi-qr-code.jpg",
+    "title": "Acceso Rápido a WiFi (QR Datalink)",
+    "cat": "wifi"
+  }
+]

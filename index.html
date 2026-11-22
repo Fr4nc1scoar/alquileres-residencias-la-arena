@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residencias La Arena | Apartamento de Lujo Frente al Mar - Playa Moreno, Pampatar</title>
+  
+  <!-- SEO & Open Graph Meta Tags (Optimizado para previsualizaciones en WhatsApp y redes) -->
+  <meta name="title" content="Residencias La Arena | Apartamento de Lujo Frente al Mar en Pampatar" />
+  <meta name="description" content="Exclusivo apartamento de 3 habitaciones y 2 baños con imponente vista al mar caribe en Playa Moreno, Pampatar (calle Hotel Tibisay). Piscina, A/A Central, Wifi, Tanque 1000L. Alquiler Vacacional y Fijo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Residencias La Arena - Apartamento Frente al Mar en Pampatar" />
+  <meta property="og:description" content="3 Habitaciones • 2 Baños • Capacidad 6 personas • Vista al Mar • Piscina • A/A Central • Alquiler Vacacional y Fijo." />
+  <meta property="og:image" content="images/vista-panoramica-mar.jpg" />
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ================= 1. MAIN HEADER ================= -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-200/90 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo & Brand -->
+      <a href="#resumen" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/25 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-water text-xl"></i>
+        </div>
+        <div>
+          <span class="font-serif font-bold text-lg text-slate-900 tracking-tight leading-none block">Residencias La Arena</span>
+          <span class="text-xs text-brand-600 font-semibold tracking-wide uppercase flex items-center gap-1 mt-0.5">
+            <i class="fa-solid fa-location-dot text-[10px]"></i> Playa Moreno • Pampatar
+          </span>
+        </div>
+      </a>
+
+      <!-- Dynamic Status Badge in Nav -->
+      <div id="status-badge" class="hidden md:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md bg-emerald-500/15 text-emerald-700 border border-emerald-500/30 pulse-available">
+        <span id="status-text">🟢 Disponible para Reservas</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Share Link Button -->
+        <button id="btn-web-share" title="Compartir enlace" class="p-2.5 rounded-xl text-slate-600 hover:text-brand-600 hover:bg-slate-100 transition-all flex items-center justify-center border border-slate-200">
+          <i class="fa-solid fa-share-nodes text-base"></i>
+        </button>
+
+        <!-- Admin Settings Button -->
+        <button id="btn-open-admin" title="Panel de Gestión y Precios" class="p-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center justify-center border border-slate-200">
+          <i class="fa-solid fa-sliders text-base"></i>
+        </button>
+
+        <!-- WhatsApp CTA -->
+        <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20informaci%C3%B3n%20sobre%20el%20apartamento%20en%20Res.%20La%20Arena%20(Playa%20Moreno)" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm shadow-sm hover:shadow transition-all duration-200">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span class="hidden sm:inline">WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= 2. MODULAR APP NAVIGATION BAR (STICKY PILLS) ================= -->
+  <nav class="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs py-2.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 overflow-x-auto scrollbar-none py-0.5">
+        <a href="#resumen" class="subnav-pill subnav-active px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-house-chimney text-xs"></i>
+          <span>Resumen</span>
+        </a>
+        <a href="#espacios" class="subnav-pill px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-couch text-xs"></i>
+          <span>Espacios & Habitaciones</span>
+        </a>
+        <a href="#galeria" class="subnav-pill px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-images text-xs"></i>
+          <span>Fotos (21)</span>
+        </a>
+        <a href="#tarifas" class="subnav-pill px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-calendar-check text-xs"></i>
+          <span>Tarifas & Reserva</span>
+        </a>
+        <a href="#huespedes" class="subnav-pill px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-wifi text-xs"></i>
+          <span>Portal WiFi & Acceso</span>
+        </a>
+        <a href="#normas" class="subnav-pill px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-halved text-xs"></i>
+          <span>Reglamentos</span>
+        </a>
+        <a href="#ubicacion" class="subnav-pill px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-xs"></i>
+          <span>Ubicación</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= 3. AIRBNB LUXE STYLE PHOTO SHOWCASE ================= -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+    <!-- Header Title & Location Info -->
+    <div class="mb-5 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="px-2.5 py-0.5 rounded-md bg-sky-100 text-brand-700 text-[11px] font-bold uppercase tracking-wider">
+            Exclusivo Pampatar
+          </span>
+          <span class="text-xs text-amber-600 font-semibold flex items-center gap-1">
+            <i class="fa-solid fa-star text-[11px]"></i> Propiedad Verificada
+          </span>
+        </div>
+        <h1 class="font-serif text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+          Hermoso Apartamento Frente al Mar en la distinguida zona de Pampatar
+        </h1>
+        <p class="text-sm text-slate-500 mt-1 flex items-center gap-1.5 flex-wrap">
+          <i class="fa-solid fa-location-dot text-brand-600"></i>
+          <span>Playa Moreno, Conjunto Residencial La Arena (calle del Hotel Tibisay), Maneiro, Edo. Nueva Esparta</span>
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <button onclick="document.getElementById('galeria').scrollIntoView({behavior:'smooth'})" class="px-4 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 font-semibold text-xs text-slate-700 shadow-xs flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-grid-2 text-brand-600"></i>
+          <span>Ver las 21 fotos</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 5-Photo Luxury Mosaic Grid -->
+    <div class="mosaic-grid shadow-card border border-slate-200">
+      
+      <!-- 1. Hero Ocean View (Spans 2 rows on desktop) -->
+      <div class="mosaic-item mosaic-main group" onclick="openLightboxBySrc('images/vista-panoramica-mar.jpg')">
+        <img src="images/vista-panoramica-mar.jpg" alt="Vista Panorámica al Mar Caribe" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4 text-white">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-sky-500/90 mb-1 inline-block">Vista Panorámica</span>
+          <h3 class="font-serif text-lg font-bold">Horizonte y Playa Moreno</h3>
+        </div>
+      </div>
+
+      <!-- 2. Cocina e Isla Calacatta -->
+      <div class="mosaic-item group hidden md:block" onclick="openLightboxBySrc('images/cocina-isla.jpg')">
+        <img src="images/cocina-isla.jpg" alt="Cocina e Isla en Mármol" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white">
+          <span class="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-900/80 mb-0.5 inline-block">Cocina Gourmet</span>
+          <h4 class="font-serif text-sm font-bold">Isla Desayunadora</h4>
+        </div>
+      </div>
+
+      <!-- 3. Habitación Principal Matrimonial -->
+      <div class="mosaic-item group hidden md:block" onclick="openLightboxBySrc('images/habitacion-principal.jpg')">
+        <img src="images/habitacion-principal.jpg" alt="Suite Principal" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white">
+          <span class="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-900/80 mb-0.5 inline-block">Suite Principal</span>
+          <h4 class="font-serif text-sm font-bold">Cama Matrimonial</h4>
+        </div>
+      </div>
+
+      <!-- 4. Baño de Lujo -->
+      <div class="mosaic-item group hidden md:block" onclick="openLightboxBySrc('images/bano-1.jpg')">
+        <img src="images/bano-1.jpg" alt="Baño 1 de Lujo" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white">
+          <span class="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-900/80 mb-0.5 inline-block">Baños Modernos</span>
+          <h4 class="font-serif text-sm font-bold">Ducha de Lluvia y LED</h4>
+        </div>
+      </div>
+
+      <!-- 5. Comedor 6 Puestos + Floating Button "Ver las 21 fotos" -->
+      <div class="mosaic-item group relative hidden md:block" onclick="openLightboxBySrc('images/comedor-vista-mar.jpg')">
+        <img src="images/comedor-vista-mar.jpg" alt="Comedor 6 Puestos" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-3 text-white">
+          <span class="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-900/80 mb-0.5 inline-block">Área Social</span>
+          <h4 class="font-serif text-sm font-bold">Comedor Frente al Mar</h4>
+        </div>
+
+        <!-- Floating Badge Button -->
+        <button onclick="event.stopPropagation(); openLightbox(0);" class="absolute bottom-3 right-3 px-3 py-1.5 rounded-xl glass text-slate-900 font-bold text-xs shadow-md flex items-center gap-1.5 hover:bg-white transition-all">
+          <i class="fa-solid fa-images text-brand-600"></i>
+          <span>+17 fotos</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4. WATER SERVICE GUARANTEE STRIP ================= -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
+    <div class="bg-gradient-to-r from-sky-900 via-sky-800 to-indigo-950 text-white p-5 rounded-2xl shadow-sm border border-sky-700/50 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-2xl bg-sky-500/20 border border-sky-400/40 flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-droplet text-sky-300 text-lg"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm text-sky-100 flex items-center gap-2">
+            Suministro de Agua Autónomo y Continuo 24/7
+            <span class="bg-sky-400/20 text-sky-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded-full border border-sky-400/30">Tanque 1.000 L</span>
+          </h4>
+          <p class="text-xs text-sky-200/90 font-light mt-0.5">
+            El servicio de red llega todos los días puntualmente a las <strong class="text-white">7:00 a.m. y 6:00 p.m. por 15 minutos</strong>, llenando el tanque interno para garantizar agua continua y excelente presión todo el día.
+          </p>
+        </div>
+      </div>
+      <div class="shrink-0 text-xs font-semibold text-emerald-300 bg-emerald-950/60 px-3.5 py-1.5 rounded-xl border border-emerald-700/40 flex items-center gap-1.5">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span>Presión & Autonomía Garantizada</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. MAIN TWO-COLUMN SOTHEBY'S LAYOUT (RESUMEN & RESERVA) ================= -->
+  <section id="resumen" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- LEFT COLUMN: PROPERTY OVERVIEW & DETAILS (7 COLS) -->
+      <div class="lg:col-span-7 space-y-8">
+        
+        <!-- Capacity & Key Specs Bar -->
+        <div class="pb-6 border-b border-slate-200">
+          <div class="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">Apartamento en Piso Alto con Vista al Mar</h2>
+              <p class="text-xs sm:text-sm text-slate-500 mt-1">
+                Capacidad Máx. para 6 personas • 3 habitaciones • 2 baños • 1 puesto de estacionamiento
+              </p>
+            </div>
+            <div class="w-12 h-12 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 font-serif font-bold text-lg">
+              LA
+            </div>
+          </div>
+
+          <!-- Feature Pills Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 text-xs font-semibold text-slate-700">
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-users text-brand-600 text-sm"></i>
+              <span>6 Huéspedes</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-bed text-brand-600 text-sm"></i>
+              <span>3 Habitaciones</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-bath text-brand-600 text-sm"></i>
+              <span>2 Baños</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-water-ladder text-brand-600 text-sm"></i>
+              <span>Piscina</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-snowflake text-brand-600 text-sm"></i>
+              <span>A/A Central</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-wifi text-brand-600 text-sm"></i>
+              <span>Wifi Fibra</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-square-parking text-brand-600 text-sm"></i>
+              <span>1 Puesto Privado</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs flex items-center gap-2.5">
+              <i class="fa-solid fa-shield-halved text-brand-600 text-sm"></i>
+              <span>Vigilancia 24/7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlight Perks Cards -->
+        <div class="space-y-4 pb-6 border-b border-slate-200">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 text-brand-600 flex items-center justify-center shrink-0 text-lg">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Vista Ininterrumpida al Mar Caribe</h4>
+              <p class="text-xs text-slate-500 leading-relaxed mt-0.5">
+                Grandes ventanales de piso a techo en sala y comedor con vista panorámica a la bahía de Pampatar y Playa Moreno.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-lg">
+              <i class="fa-solid fa-temperature-arrow-down"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Climatización Central Integral</h4>
+              <p class="text-xs text-slate-500 leading-relaxed mt-0.5">
+                Aire acondicionado central de alta potencia que mantiene una temperatura fresca y confortable en todas las habitaciones y áreas sociales.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0 text-lg">
+              <i class="fa-solid fa-bell-concierge"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Totalmente Amoblado y Equipado de Primera</h4>
+              <p class="text-xs text-slate-500 leading-relaxed mt-0.5">
+                Cocina con acabados Calacatta, placa de inducción, horno, lavadora-secadora en torre, Smart TV en sala y habitaciones.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Description Narrative -->
+        <div class="space-y-4">
+          <h3 class="font-serif text-xl font-bold text-slate-900">Sobre la Propiedad</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Ubicado en una de las zonas residenciales más codiciadas y seguras de la Isla de Margarita, este apartamento en <strong>Residencias La Arena</strong> combina la comodidad de un hogar moderno con la serenidad de despertar frente al mar. Situado en la calle del Hotel Tibisay, a solo 3 minutos de las mejores playas, centros comerciales (Sambil, La Vela, Parque Costazul) y de la vibrante ruta gastronómica de Pampatar.
+          </p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            El conjunto residencial cuenta con piscina privada para adultos y niños, solárium, ascensor moderno, estacionamiento privado y control de acceso con vigilancia privada las 24 horas del día.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: STICKY BOOKING & RATES CARD (5 COLS) -->
+      <div class="lg:col-span-5 lg:sticky lg:top-36">
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-card hover:shadow-hover transition-all">
+          
+          <!-- Sticky Widget Tabs: Vacacional vs Fijo -->
+          <div class="p-1 rounded-xl bg-slate-100 flex items-center gap-1 mb-5">
+            <button id="sticky-tab-vac" class="w-1/2 py-2 rounded-lg font-bold text-xs bg-sky-600 text-white shadow-sm transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-umbrella-beach"></i>
+              <span>Vacacional (Por Noche)</span>
+            </button>
+            <button id="sticky-tab-fix" class="w-1/2 py-2 rounded-lg font-bold text-xs bg-transparent text-slate-600 hover:text-slate-900 transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-file-contract"></i>
+              <span>Alquiler Fijo ($900)</span>
+            </button>
+          </div>
+
+          <!-- VACACIONAL CALCULATOR VIEW -->
+          <div id="sticky-content-vac" class="space-y-5">
+            
+            <!-- Rate Highlights -->
+            <div class="flex items-baseline justify-between pb-4 border-b border-slate-100">
+              <div>
+                <span class="text-xs text-slate-500 uppercase font-semibold block">Tarifa regular</span>
+                <div class="flex items-baseline gap-1">
+                  <span id="price-low-display" class="font-serif text-3xl font-bold text-slate-900">$80</span>
+                  <span class="text-xs text-slate-500">/ noche (Temp. Baja)</span>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="text-xs text-amber-700 font-semibold block">Temporada Alta</span>
+                <span id="price-high-display" class="font-serif text-xl font-bold text-amber-600">$130</span>
+                <span class="text-xs text-slate-500">/ noche</span>
+              </div>
+            </div>
+
+            <!-- Nights & Season Fields -->
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="calc-nights" class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Noches</label>
+                <input type="number" id="calc-nights" min="1" max="60" value="3" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 font-semibold text-sm text-slate-800" />
+              </div>
+
+              <div>
+                <label for="calc-season" class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Temporada</label>
+                <select id="calc-season" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 font-semibold text-xs text-slate-800 bg-white">
+                  <option value="low">Baja ($80)</option>
+                  <option value="high">Alta ($130)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="calc-guests" class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Huéspedes (Máx 6)</label>
+              <select id="calc-guests" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 font-semibold text-xs text-slate-800 bg-white">
+                <option value="1 a 2">1 a 2 personas</option>
+                <option value="3 a 4" selected>3 a 4 personas</option>
+                <option value="5 a 6">5 a 6 personas</option>
+              </select>
+            </div>
+
+            <!-- Subtotal Calculation Box -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] text-slate-500 uppercase font-semibold block">Total Estimado</span>
+                <span id="calc-nights-count" class="text-xs text-slate-500">3 noches</span>
+                <span id="calc-rate-per-night" class="text-[11px] font-medium text-brand-700 block">$80/noche</span>
+              </div>
+              <div id="calc-subtotal" class="font-serif text-3xl font-bold text-slate-900">$240</div>
+            </div>
+
+            <!-- Check-in & Check-out note -->
+            <div class="text-[11px] text-slate-500 flex items-center justify-between px-1">
+              <span><i class="fa-solid fa-clock text-brand-600"></i> Check-in: 3:00 PM</span>
+              <span><i class="fa-solid fa-clock text-amber-600"></i> Check-out: 12:00 PM</span>
+            </div>
+
+            <!-- Direct Booking CTA -->
+            <a id="btn-book-vacation-wa" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Reservar por WhatsApp</span>
+            </a>
+
+          </div>
+
+          <!-- FIJO / CONTRATO RESIDENCIAL VIEW -->
+          <div id="sticky-content-fix" class="hidden space-y-5">
+            
+            <div class="pb-3 border-b border-slate-100">
+              <span class="text-xs font-bold uppercase text-indigo-700 tracking-wider">Contrato Residencial 6 Meses</span>
+              <div class="flex items-baseline gap-1 mt-1">
+                <span id="price-fixed-display" class="font-serif text-4xl font-bold text-slate-900">$900</span>
+                <span class="text-xs text-slate-500">/ mes (Canon)</span>
+              </div>
+              <span class="text-xs text-emerald-600 font-semibold mt-1 inline-flex items-center gap-1">
+                <i class="fa-solid fa-check"></i> Condominio INCLUIDO en el canon
+              </span>
+            </div>
+
+            <div class="space-y-2.5 text-xs text-slate-600">
+              <div class="flex justify-between py-1 border-b border-slate-100">
+                <span class="text-slate-500">Depósito en garantía:</span>
+                <span class="font-bold text-slate-900" id="price-fixed-deposit">$1,800 (2 meses)</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-slate-100">
+                <span class="text-slate-500">Duración mínima:</span>
+                <span class="font-bold text-slate-900">6 meses (renovable)</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-slate-100">
+                <span class="text-slate-500">Servicios (luz, wifi):</span>
+                <span class="font-bold text-slate-900">Por cuenta del inquilino</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-slate-100">
+                <span class="text-slate-500">Mantenimiento A/A:</span>
+                <span class="font-bold text-slate-900">Cada 3 meses</span>
+              </div>
+            </div>
+
+            <a id="btn-book-fixed-wa" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i>
+              <span>Solicitar Visita / Alquiler Fijo</span>
+            </a>
+
+          </div>
+
+          <!-- Direct Call & Payment Badges footer -->
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span class="flex items-center gap-1"><i class="fa-solid fa-phone text-brand-600"></i> 0414-3336722</span>
+            <div class="flex items-center gap-2 text-slate-400 text-sm">
+              <i class="fa-solid fa-money-bill-wave" title="Efectivo USD"></i>
+              <i class="fa-solid fa-bolt" title="Zelle"></i>
+              <i class="fa-solid fa-building-columns" title="Bolívares / Banesco Panamá"></i>
+              <i class="fa-brands fa-bitcoin" title="Binance Pay"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 6. MODULAR SECTION: ESPACIOS & HABITACIONES (ROOM TOUR) ================= -->
+  <section id="espacios" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">Recorrido por Ambientes</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Distribución y Espacios</h2>
+        <p class="text-slate-600 text-sm">Conoce en detalle cada área acondicionada para tu máxima comodidad.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Espacio 1: Sala-Comedor Panorámico -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-card transition-all group bg-slate-50 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative cursor-pointer" onclick="openLightboxBySrc('images/comedor-vista-mar.jpg')">
+              <img src="images/comedor-vista-mar.jpg" alt="Comedor y Sala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute bottom-3 left-3 bg-slate-950/70 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                Vista al Mar Caribe
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-1">Sala & Comedor Panorámico</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Mesa de vidrio para 6 comensales, sofás modulares en tono perla, Smart TV y amplios ventanales frente al mar.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 text-xs font-semibold text-brand-600 flex items-center justify-between border-t border-slate-200/60 pt-3">
+            <span>A/A Central • Luz Natural</span>
+            <span class="cursor-pointer hover:underline" onclick="openLightboxBySrc('images/comedor-vista-mar.jpg')">Ver foto <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+          </div>
+        </div>
+
+        <!-- Espacio 2: Cocina Gourmet con Isla -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-card transition-all group bg-slate-50 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative cursor-pointer" onclick="openLightboxBySrc('images/cocina-moderna.jpg')">
+              <img src="images/cocina-moderna.jpg" alt="Cocina Gourmet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute bottom-3 left-3 bg-slate-950/70 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                Mármol Calacatta
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-1">Cocina de Diseño con Isla</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Isla desayunadora con taburetes, placa vitrocerámica de inducción, horno empotrado, microondas, cafetera y licuadora.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 text-xs font-semibold text-brand-600 flex items-center justify-between border-t border-slate-200/60 pt-3">
+            <span>Totalmente Equipada</span>
+            <span class="cursor-pointer hover:underline" onclick="openLightboxBySrc('images/cocina-moderna.jpg')">Ver foto <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+          </div>
+        </div>
+
+        <!-- Espacio 3: Suite Principal Matrimonial -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-card transition-all group bg-slate-50 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative cursor-pointer" onclick="openLightboxBySrc('images/habitacion-principal.jpg')">
+              <img src="images/habitacion-principal.jpg" alt="Suite Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute bottom-3 left-3 bg-slate-950/70 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                Suite Master
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-1">Suite Matrimonial Queen</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Cama queen con cabecero tapizado, decoración zen, espejo de cuerpo entero, Smart TV y climatización central.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 text-xs font-semibold text-brand-600 flex items-center justify-between border-t border-slate-200/60 pt-3">
+            <span>2 Huéspedes • Baño Privado</span>
+            <span class="cursor-pointer hover:underline" onclick="openLightboxBySrc('images/habitacion-principal.jpg')">Ver foto <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+          </div>
+        </div>
+
+        <!-- Espacio 4: Habitación Secundaria (2 Camas) -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-card transition-all group bg-slate-50 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative cursor-pointer" onclick="openLightboxBySrc('images/habitacion-2.jpg')">
+              <img src="images/habitacion-2.jpg" alt="Habitación 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute bottom-3 left-3 bg-slate-950/70 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                2 Camas
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-1">Habitación Secundaria</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Dos camas individuales con lencería blanca de algodón, mesa flotante, lámpara de noche y Smart TV en pared.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 text-xs font-semibold text-brand-600 flex items-center justify-between border-t border-slate-200/60 pt-3">
+            <span>Ideal Familia / Niños</span>
+            <span class="cursor-pointer hover:underline" onclick="openLightboxBySrc('images/habitacion-2.jpg')">Ver foto <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+          </div>
+        </div>
+
+        <!-- Espacio 5: Baños de Lujo -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-card transition-all group bg-slate-50 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative cursor-pointer" onclick="openLightboxBySrc('images/bano-2.jpg')">
+              <img src="images/bano-2.jpg" alt="Baños" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute bottom-3 left-3 bg-slate-950/70 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                2 Baños Completos
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-1">Baños Contemporáneos</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Duchas de lluvia con mamparas de vidrio templado, espejos con marco LED táctil, agua caliente y acabados de lujo.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 text-xs font-semibold text-brand-600 flex items-center justify-between border-t border-slate-200/60 pt-3">
+            <span>Agua Caliente Continua</span>
+            <span class="cursor-pointer hover:underline" onclick="openLightboxBySrc('images/bano-2.jpg')">Ver foto <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+          </div>
+        </div>
+
+        <!-- Espacio 6: Lavandero & Tanque 1.000 L -->
+        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-card transition-all group bg-slate-50 flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative cursor-pointer" onclick="openLightboxBySrc('images/lavandero-tanque.jpg')">
+              <img src="images/lavandero-tanque.jpg" alt="Lavandero y Tanque" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute bottom-3 left-3 bg-slate-950/70 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                Autonomía 1.000 L
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-1">Lavandero & Tanque de Agua</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Torre de lavado Whirlpool (lavadora y secadora), batea y tanque vertical de 1.000 L con bomba para agua garantizada.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 text-xs font-semibold text-brand-600 flex items-center justify-between border-t border-slate-200/60 pt-3">
+            <span>Lavadora • Secadora • Tanque</span>
+            <span class="cursor-pointer hover:underline" onclick="openLightboxBySrc('images/lavandero-tanque.jpg')">Ver foto <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 7. MODULAR SECTION: GALERÍA FOTOGRÁFICA (21 FOTOS UNIFORMES) ================= -->
+  <section id="galeria" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block mb-1">Recorrido Fotográfico</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Galería de Imágenes (21 Fotos)</h2>
+        <p class="text-slate-500 text-sm mt-1">Haz clic en cualquier fotografía para abrir el visor en alta resolución a pantalla completa.</p>
+      </div>
+
+      <!-- Filter Buttons Bar -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none max-w-full">
+        <button data-filter="todos" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-sky-600 text-white shadow-md transition-all">
+          Todas (21)
+        </button>
+        <button data-filter="vistas" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 transition-all border border-slate-200">
+          Vista al Mar
+        </button>
+        <button data-filter="social" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 transition-all border border-slate-200">
+          Sala & Comedor
+        </button>
+        <button data-filter="cocina" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 transition-all border border-slate-200">
+          Cocina & Isla
+        </button>
+        <button data-filter="habitaciones" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 transition-all border border-slate-200">
+          Habitaciones
+        </button>
+        <button data-filter="banos" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 transition-all border border-slate-200">
+          Baños
+        </button>
+        <button data-filter="servicios" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 transition-all border border-slate-200">
+          Servicios & WiFi
+        </button>
+        <button data-filter="normas" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-100 transition-all border border-slate-200">
+          Reglamentos
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery Uniform Grid (Using .gallery-card to eliminate all blank white gaps) -->
+    <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Injected via app.js -->
+    </div>
+  </section>
+
+  <!-- ================= 8. MODULAR SECTION: TARIFAS & FORMAS DE PAGO ================= -->
+  <section id="tarifas" class="py-16 bg-slate-100/70 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">Precios Claros y Transparentes</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Tarifas y Modalidades de Pago</h2>
+        <p class="text-slate-600 text-sm">Opciones diseñadas tanto para estadías cortas como para residencia fija.</p>
+      </div>
+
+      <!-- Comparison Pricing Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Temp Baja -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-sky-100 text-brand-700 mb-4 inline-block">
+              Vacacional Regular
+            </span>
+            <h3 class="font-serif text-xl font-bold text-slate-900">Temporada Baja</h3>
+            <div class="flex items-baseline gap-1 my-3">
+              <span class="font-serif text-4xl font-bold text-slate-900">$80</span>
+              <span class="text-xs text-slate-500">/ noche</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Válido para fines de semana y días laborables fuera de asuetos nacionales. Capacidad hasta 6 personas.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Check-in 3:00 PM | Check-out 12:00 PM</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Acceso a piscina y áreas comunes</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Wifi y estacionamiento incluidos</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20reservar%20en%20Temporada%20Baja%20($80/noche)." target="_blank" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-all text-center block">
+              Consultar Fechas
+            </a>
+          </div>
+        </div>
+
+        <!-- Temp Alta -->
+        <div class="bg-white rounded-3xl p-7 border-2 border-brand-500 shadow-md flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-6 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full shadow">
+            Fechas Festivas
+          </div>
+          <div>
+            <span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 mb-4 inline-block">
+              Vacacional Festivo
+            </span>
+            <h3 class="font-serif text-xl font-bold text-slate-900">Temporada Alta</h3>
+            <div class="flex items-baseline gap-1 my-3">
+              <span class="font-serif text-4xl font-bold text-slate-900">$130</span>
+              <span class="text-xs text-slate-500">/ noche</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Carnavales, Semana Santa, Navidad, Año Nuevo y asuetos con alta demanda turística.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Capacidad total para 6 personas</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Reserva previa garantizada</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Seguridad privada 24/7</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20reservar%20en%20Temporada%20Alta%20($130/noche)." target="_blank" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs transition-all text-center block shadow-md">
+              Consultar Temporada Alta
+            </a>
+          </div>
+        </div>
+
+        <!-- Alquiler Fijo -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-indigo-100 text-indigo-700 mb-4 inline-block">
+              Contrato Anual
+            </span>
+            <h3 class="font-serif text-xl font-bold text-slate-900">Alquiler Fijo Mensual</h3>
+            <div class="flex items-baseline gap-1 my-3">
+              <span class="font-serif text-4xl font-bold text-slate-900">$900</span>
+              <span class="text-xs text-slate-500">/ mes</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Contrato de 6 meses renovable. <strong class="text-emerald-600">Condominio incluido en el monto del canon</strong>.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> $1,800 de depósito (2 meses)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Servicios (luz y wifi) por cuenta inquilino</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Mantenimiento de A/A cada 3 meses</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20postularme%20para%20el%20Alquiler%20Fijo%20($900/mes)." target="_blank" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-all text-center block">
+              Postular para Alquiler Fijo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Payment Gateways Grid & Condominium Account -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+        <h4 class="font-serif text-lg font-bold text-slate-900 mb-5">Canales de Pago Aceptados</h4>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+            <i class="fa-solid fa-money-bill-wave text-emerald-600 text-xl mb-2"></i>
+            <span class="font-bold text-xs text-slate-900 block">Dólares Efectivo</span>
+            <span class="text-[10px] text-slate-400">Sin tachaduras</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+            <i class="fa-solid fa-building-columns text-sky-600 text-xl mb-2"></i>
+            <span class="font-bold text-xs text-slate-900 block">Bolívares</span>
+            <span class="text-[10px] text-slate-400">Transferencia / Pago Móvil</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+            <i class="fa-solid fa-bolt text-purple-600 text-xl mb-2"></i>
+            <span class="font-bold text-xs text-slate-900 block">Zelle</span>
+            <span class="text-[10px] text-slate-400">Transferencias USD</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+            <i class="fa-solid fa-globe text-amber-600 text-xl mb-2"></i>
+            <span class="font-bold text-xs text-slate-900 block">Banesco Panamá</span>
+            <span class="text-[10px] text-slate-400">Cuentas internacionales</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center col-span-2 sm:col-span-1">
+            <i class="fa-brands fa-bitcoin text-yellow-600 text-xl mb-2"></i>
+            <span class="font-bold text-xs text-slate-900 block">Binance Pay</span>
+            <span class="text-[10px] text-slate-400">USDT / Cripto</span>
+          </div>
+        </div>
+
+        <!-- Condominio Account Data -->
+        <div class="p-5 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 block mb-0.5">Cuenta Oficial Condominio La Arena</span>
+            <h5 class="font-serif font-bold text-base">Banesco — RESIDENCIA LA ARENA</h5>
+            <p class="text-xs text-slate-300 font-mono mt-0.5">
+              Cuenta: <strong class="text-white select-all">0134-0221-3722-1100-7330</strong> • RIF: <strong class="text-white select-all">J-30257327-0</strong>
+            </p>
+          </div>
+          <button onclick="copyText('0134-0221-3722-1100-7330', '¡Cuenta Banesco copiada!')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold shrink-0 transition-all flex items-center gap-2">
+            <i class="fa-regular fa-copy"></i>
+            <span>Copiar Cuenta</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 9. MODULAR SECTION: PORTAL DEL HUÉSPED & WIFI ================= -->
+  <section id="huespedes" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">Zona de Huéspedes Confirmados</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Conectividad & Acceso Directo</h2>
+        <p class="text-slate-600 text-sm">Información esencial de WiFi y contactos para tu estadía.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- WiFi Card -->
+        <div class="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-sky-500 text-white flex items-center justify-center text-xl shadow-md shadow-sky-500/20">
+                <i class="fa-solid fa-wifi"></i>
+              </div>
+              <div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">WiFi Fibra Óptica (DATALINK)</h3>
+                <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Conexión de Alta Velocidad
+                </span>
+              </div>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">#1047992</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-white border border-slate-200">
+              <span class="text-[10px] text-slate-400 uppercase font-bold block mb-1">Nombre de Red (SSID)</span>
+              <span class="font-mono text-xl font-bold text-slate-900 select-all">Emi</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase font-bold block mb-1">Contraseña</span>
+                <span class="font-mono text-xl font-bold text-slate-900 select-all">Emi.4624</span>
+              </div>
+              <button onclick="copyText('Emi.4624', '¡Contraseña WiFi copiada!')" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-brand-600 transition-all" title="Copiar contraseña">
+                <i class="fa-regular fa-copy text-base"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="text-xs text-slate-500 space-y-1">
+            <p>• Titular: <strong class="text-slate-700">Yuleidys Deluques</strong> (C.I. V-20.537.753)</p>
+            <p>• Cobertura en todas las habitaciones y áreas del apartamento para streaming y videollamadas.</p>
+          </div>
+        </div>
+
+        <!-- QR Code Visual -->
+        <div class="lg:col-span-5 bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col items-center justify-center text-center">
+          <div class="w-52 h-52 rounded-2xl overflow-hidden border-2 border-white shadow-md p-2 bg-white mb-3 cursor-pointer" onclick="openLightboxBySrc('images/wifi-qr-code.jpg')" title="Ver QR completo">
+            <img src="images/wifi-qr-code.jpg" alt="WiFi QR Code" class="w-full h-full object-contain" />
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Escanea con la cámara de tu celular</h4>
+          <p class="text-xs text-slate-500 mt-1 max-w-xs">
+            Apunta la cámara de tu teléfono al código para conectarte automáticamente al WiFi sin escribir la contraseña.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Owners Numbers -->
+      <div class="mt-8 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="font-serif font-bold text-slate-900 text-base">Teléfonos de Asistencia Directa</h4>
+          <p class="text-xs text-slate-500 mt-0.5">Disponibles para entrega de llaves, check-in e inquietudes.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/584143336722" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold text-xs flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+            <span>0414-3336722</span>
+          </a>
+          <a href="https://wa.me/584123598243" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold text-xs flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+            <span>0412-3598243</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 10. MODULAR SECTION: REGLAMENTOS Y NORMAS ================= -->
+  <section id="normas" class="py-16 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">Convivencia en Armonía</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Normas y Reglamentos</h2>
+        <p class="text-slate-600 text-sm">Aprobadas por la Asamblea de Propietarios para la tranquilidad de todos.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Apartamento -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+            <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-base">
+              <i class="fa-solid fa-house-user"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">En el Apartamento</h3>
+              <span class="text-[11px] text-slate-400">Reglas esenciales</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-ban text-rose-500 mt-0.5"></i> Prohibido fumar dentro del inmueble</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-volume-xmark text-rose-500 mt-0.5"></i> Sin ruidos molestos a los vecinos</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-champagne-glasses text-rose-500 mt-0.5"></i> No se permiten fiestas ni eventos</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-clock text-brand-600 mt-0.5"></i> Check-out puntual: 12:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Piscina -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+            <div class="w-9 h-9 rounded-xl bg-sky-100 text-brand-600 flex items-center justify-center text-base">
+              <i class="fa-solid fa-person-swimming"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">En la Piscina</h3>
+              <span class="text-[11px] text-slate-400">Horario: 9:00 AM - 10:00 PM</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-shower text-brand-600 mt-0.5"></i> Ducha obligatoria antes de ingresar</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-wine-glass text-rose-500 mt-0.5"></i> Prohibidos envases de vidrio</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-burger text-rose-500 mt-0.5"></i> Prohibido comer dentro del agua</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-child text-amber-600 mt-0.5"></i> Menores de 12 años con un adulto</li>
+          </ul>
+        </div>
+
+        <!-- Condominio -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-100">
+            <div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-base">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">En el Condominio</h3>
+              <span class="text-[11px] text-slate-400">Vigilancia 24 Horas</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-id-card text-brand-600 mt-0.5"></i> Identificación en garita de vigilancia</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-square-parking text-brand-600 mt-0.5"></i> Estacionar solo en puesto asignado</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-gauge-high text-brand-600 mt-0.5"></i> Límite de velocidad interna: 10 km/h</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-shirt text-slate-500 mt-0.5"></i> No circular sin camisa en pasillos</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 11. MODULAR SECTION: UBICACIÓN & ENTORNO ================= -->
+  <section id="ubicacion" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-600 block mb-1">Entorno Exclusivo</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+            Playa Moreno, Pampatar • Isla de Margarita
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            El <strong>Conjunto Residencial La Arena</strong> se encuentra en la calle del Hotel Tibisay, en el Municipio Maneiro. Una ubicación estratégica que te permite disfrutar de la paz marina a pocos minutos de toda la actividad gastronómica y comercial de la isla.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 text-xs text-slate-700 pt-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-umbrella-beach text-sky-500"></i> A 2 min de Playa Moreno</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-hotel text-sky-500"></i> Frente al Hotel Tibisay</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-bag-shopping text-sky-500"></i> C.C. Sambil y La Vela a 4 min</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-utensils text-sky-500"></i> Zona Gastronómica Pampatar</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-table-tennis-paddle-ball text-sky-500"></i> Canchas de Pádel y Gym</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-heart-pulse text-sky-500"></i> Farmacias y Clínicas 24h</div>
+          </div>
+
+          <div class="pt-3">
+            <a href="https://maps.google.com/?q=Hotel+Tibisay+Playa+Moreno+Pampatar+Margarita" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs shadow-md transition-all">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Abrir en Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden shadow-card border border-slate-200 relative group cursor-pointer" onclick="openLightboxBySrc('images/vista-mar-tibisay.jpg')">
+            <img src="images/vista-mar-tibisay.jpg" alt="Entorno Playa Moreno" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-[10px] uppercase font-bold px-2.5 py-0.5 rounded-full bg-sky-500/90 inline-block mb-1">Ubicación Privilegiada</span>
+              <h4 class="font-serif text-xl font-bold">Playa Moreno & Hotel Tibisay</h4>
+              <p class="text-xs text-slate-200 mt-0.5">Municipio Maneiro, Pampatar, Margarita</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 12. FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800 text-center sm:text-left">
+        <div>
+          <h4 class="font-serif font-bold text-white text-lg">Residencias La Arena</h4>
+          <span class="text-xs text-slate-400">Apartamento de Lujo Frente al Mar • Pampatar, Margarita</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/584143336722" target="_blank" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+          </a>
+          <button onclick="document.getElementById('btn-open-admin').click()" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Panel de Gestión">
+            <i class="fa-solid fa-gear text-sm"></i>
+          </button>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2 text-center sm:text-left">
+        <p>© 2026 Residencias La Arena. Todos los derechos reservados.</p>
+        <p>Capacidad Máx: 6 personas • 3 Hab • 2 Baños • Piscina • Tanque 1.000 L</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE STICKY BOTTOM BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-3 shadow-2xl flex items-center justify-between gap-3">
+    <div class="leading-tight">
+      <span class="text-[10px] text-slate-400 block uppercase font-bold">Tarifa</span>
+      <div id="mobile-price-display" class="font-serif text-sm font-bold text-slate-900">
+        $80 - $130/noche
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="tel:+584143336722" class="p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+        <i class="fa-solid fa-phone text-sm"></i>
+      </a>
+      <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20consultar%20disponibilidad%20para%20el%20apartamento%20en%20Res.%20La%20Arena." target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-md">
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>Reservar</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING WHATSAPP CTA (DESKTOP) ================= -->
+  <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20informaci%C3%B3n%20sobre%20el%20apartamento%20en%20Res.%20La%20Arena." target="_blank" rel="noopener noreferrer" class="sticky-wa-float hidden lg:flex items-center gap-2.5 px-5 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-2xl border-2 border-white transition-all">
+    <i class="fa-brands fa-whatsapp text-xl"></i>
+    <span>Consultar por WhatsApp</span>
+  </a>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="lightbox" class="lightbox-overlay">
+    <button id="lightbox-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-lg z-50 backdrop-blur-md transition-colors">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button id="lightbox-prev" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center text-xl z-50 backdrop-blur-md transition-colors">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="lightbox-next" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center text-xl z-50 backdrop-blur-md transition-colors">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <div id="lightbox-container" class="flex flex-col items-center justify-center max-w-5xl max-h-[90vh] px-4">
+      <img id="lightbox-img" src="" alt="Vista previa del apartamento" class="lightbox-img mb-3" />
+      <div class="text-center text-white max-w-xl">
+        <div id="lightbox-counter" class="text-xs text-sky-400 font-semibold uppercase tracking-wider mb-1"></div>
+        <h4 id="lightbox-title" class="font-serif text-lg sm:text-2xl font-bold mb-1"></h4>
+        <p id="lightbox-caption" class="text-xs sm:text-sm text-slate-300"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADMIN CONFIG DRAWER ================= -->
+  <div id="admin-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-slate-200 relative">
+      <button id="btn-close-admin" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-lg p-1">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-brand-700 flex items-center justify-center text-lg">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-lg font-bold text-slate-900">Panel del Propietario</h3>
+          <p class="text-xs text-slate-500">Ajusta disponibilidad y tarifas sobre la marcha</p>
+        </div>
+      </div>
+      <form id="form-admin" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Estado de Disponibilidad</label>
+          <select id="admin-status" class="w-full px-3 py-2 rounded-xl border border-slate-300 font-medium text-xs text-slate-800 bg-white">
+            <option value="available">🟢 Disponible para Reservas</option>
+            <option value="reserved">🟡 Reserva en Proceso / Consultar</option>
+            <option value="occupied">🔴 Ocupado Actualmente</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Temp. Baja ($/noche)</label>
+            <input type="number" id="admin-price-low" value="80" class="w-full px-3 py-2 rounded-xl border border-slate-300 font-semibold text-sm text-slate-800" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Temp. Alta ($/noche)</label>
+            <input type="number" id="admin-price-high" value="130" class="w-full px-3 py-2 rounded-xl border border-slate-300 font-semibold text-sm text-slate-800" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Alquiler Fijo ($/mes)</label>
+          <input type="number" id="admin-price-fixed" value="900" class="w-full px-3 py-2 rounded-xl border border-slate-300 font-semibold text-sm text-slate-800" />
+        </div>
+        <div class="pt-2 flex flex-col gap-2">
+          <button type="submit" class="w-full py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs shadow-sm">
+            Guardar Cambios
+          </button>
+          <button type="button" id="btn-copy-share-link" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-link text-brand-600"></i>
+            <span>Copiar Enlace con estos Precios</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="images-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
