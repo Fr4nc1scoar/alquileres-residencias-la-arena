@@ -6,7 +6,7 @@
   const appState = {
     status: 'available', // 'available' | 'reserved' | 'occupied'
     priceLow: 80,
-    priceHigh: 130,
+    priceHigh: 120, // Actualizado a $120/noche para temporada alta
     priceFixed: 900,
     deposit: 1800,
     checkIn: '3:00 PM',
@@ -116,55 +116,102 @@
   if (calcSeason) calcSeason.addEventListener('change', updateCalculator);
   if (calcGuests) calcGuests.addEventListener('change', updateCalculator);
 
-  // 3. Modular Tab Controller (Una por una, con orden y claridad)
-  window.switchModule = function (targetId) {
-    // If targetId is 'todos', show all modules
-    if (targetId === 'todos') {
-      moduleViews.forEach(view => view.classList.add('active'));
-    } else {
-      moduleViews.forEach(view => {
-        if (view.id === `mod-${targetId}`) {
-          view.classList.add('active');
-        } else {
-          view.classList.remove('active');
-        }
-      });
-    }
+  // 3. Modular Navigation Controller (Directorio visual sin scroll lateral)
+  const moduleOrder = ['vacacional', 'fijo', 'fotos', 'ambientes', 'wifi', 'normas', 'ubicacion'];
 
-    // Update active tab button style
-    tabBtns.forEach(btn => {
-      if (btn.getAttribute('data-target') === targetId) {
-        btn.classList.add('active');
+  const moduleTitles = {
+    vacacional: '🌴 Alquiler Vacacional ($80 - $120/noche)',
+    fijo: '🏢 Alquiler Fijo ($900/mes canon)',
+    fotos: '📸 Galería Fotográfica (21 Fotos HD)',
+    ambientes: '🛋️ Ambientes & Espacios del Apartamento',
+    wifi: '📶 Portal WiFi DATALINK (Red Emi & QR)',
+    normas: '📜 Normas del Edificio, Piscina y Condominio',
+    ubicacion: '📍 Ubicación & Entorno (Playa Moreno, Pampatar)',
+    todos: '📋 Recorrido Completo (Todos los Módulos)'
+  };
+
+  window.switchModule = function (targetId, shouldScroll = true) {
+    const isAll = targetId === 'todos';
+
+    // Show/hide modules
+    moduleViews.forEach(view => {
+      if (isAll || view.id === `mod-${targetId}`) {
+        view.classList.add('active');
       } else {
-        btn.classList.remove('active');
+        view.classList.remove('active');
       }
     });
 
-    // Update URL hash without jumping
+    // Update active cards in the visual grid
+    const moduleCards = document.querySelectorAll('[data-module-card]');
+    moduleCards.forEach(card => {
+      const cardTarget = card.getAttribute('data-module-card');
+      if (isAll || cardTarget === targetId) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+
+    // Update mode buttons (Por Módulo vs Ver Todo)
+    const btnModeSingle = document.getElementById('btn-mode-single');
+    const btnModeAll = document.getElementById('btn-mode-all');
+    if (btnModeSingle && btnModeAll) {
+      if (isAll) {
+        btnModeAll.classList.add('active');
+        btnModeSingle.classList.remove('active');
+      } else {
+        btnModeSingle.classList.add('active');
+        btnModeAll.classList.remove('active');
+      }
+    }
+
+    // Update current module header bar
+    const currentModuleTitle = document.getElementById('current-module-title');
+    if (currentModuleTitle) {
+      currentModuleTitle.textContent = moduleTitles[targetId] || 'Módulo de Consulta';
+    }
+
+    // Update URL hash
     if (history.replaceState) {
       history.replaceState(null, null, `#${targetId}`);
     }
 
-    // Scroll smoothly to modules container
-    const container = document.getElementById('modules-container');
-    if (container) {
-      const topOffset = container.getBoundingClientRect().top + window.pageYOffset - 80;
-      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    // Smooth scroll to active module section
+    if (shouldScroll) {
+      const anchor = document.getElementById('active-module-anchor');
+      if (anchor) {
+        const topOffset = anchor.getBoundingClientRect().top + window.pageYOffset - 75;
+        window.scrollTo({ top: topOffset, behavior: 'smooth' });
+      }
     }
   };
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.getAttribute('data-target');
-      window.switchModule(target);
-    });
-  });
+  window.navigateModule = function (direction) {
+    const current = window.location.hash.replace('#', '') || 'vacacional';
+    let idx = moduleOrder.indexOf(current);
+    if (idx === -1) idx = 0;
+    if (direction === 'next') {
+      idx = (idx + 1) % moduleOrder.length;
+    } else if (direction === 'prev') {
+      idx = (idx - 1 + moduleOrder.length) % moduleOrder.length;
+    }
+    window.switchModule(moduleOrder[idx]);
+  };
+
+  window.scrollToMenu = function () {
+    const menu = document.getElementById('modulos-directorio');
+    if (menu) {
+      const topOffset = menu.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }
+  };
 
   // Check URL hash on load
   function initHashModule() {
     const hash = window.location.hash.replace('#', '');
     if (hash && ['vacacional', 'fijo', 'fotos', 'ambientes', 'wifi', 'normas', 'ubicacion', 'todos'].includes(hash)) {
-      window.switchModule(hash);
+      window.switchModule(hash, false);
     }
   }
 
