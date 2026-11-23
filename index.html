@@ -103,56 +103,58 @@
     </div>
   </header>
 
-  <!-- ================= FOTO PANORÁMICA DE ENTRADA (COMPLETA 4:3 SIN RECORTES + CARRUSEL) ================= -->
-  <section class="max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 pt-4">
-    <div class="panoramic-hero rounded-2xl sm:rounded-3xl shadow-lg border border-slate-200/80">
-      <img 
-        id="hero-carousel-img"
-        src="images/vista-panoramica-mar.jpg" 
-        alt="Vista panorámica al mar Caribe desde Residencias La Arena" 
-        class="panoramic-hero-img" 
-        onclick="openHeroLightbox()"
-        title="Toca para ver la foto a pantalla completa"
-      />
-      <div class="panoramic-hero-overlay"></div>
+  <!-- ================= FOTO PANORÁMICA DE ENTRADA (FONDO AZUL + RESALTADA + SE ENCOGE AL BAJAR) ================= -->
+  <section class="hero-blue-stage">
+    <div class="max-w-5xl mx-auto">
+      <div id="hero-photo-frame" class="panoramic-hero rounded-2xl sm:rounded-3xl">
+        <img 
+          id="hero-carousel-img"
+          src="images/vista-panoramica-mar.jpg" 
+          alt="Vista panorámica al mar Caribe desde Residencias La Arena" 
+          class="panoramic-hero-img" 
+          onclick="openHeroLightbox()"
+          title="Toca para ver la foto a pantalla completa"
+        />
+        <div class="panoramic-hero-overlay"></div>
 
-      <!-- Barra superior flotante (sin colisiones en móvil) -->
-      <div class="absolute top-3 left-3 right-3 sm:top-5 sm:left-5 sm:right-5 z-10 flex items-center justify-between gap-2">
-        <div id="hero-status-badge" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wide backdrop-blur-md bg-emerald-500/30 text-emerald-200 border border-emerald-400/50 shadow-md pulse-available whitespace-nowrap">
-          <span id="hero-status-text"><span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping inline-block mr-1"></span>Disponible<span class="hidden sm:inline"> para Reservas</span></span>
+        <!-- Barra superior flotante (sin colisiones en móvil) -->
+        <div class="absolute top-3 left-3 right-3 sm:top-5 sm:left-5 sm:right-5 z-10 flex items-center justify-between gap-2">
+          <div id="hero-status-badge" class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wide backdrop-blur-md bg-emerald-500/30 text-emerald-200 border border-emerald-400/50 shadow-md pulse-available whitespace-nowrap">
+            <span id="hero-status-text"><span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping inline-block mr-1"></span>Disponible<span class="hidden sm:inline"> para Reservas</span></span>
+          </div>
+
+          <button onclick="openHeroLightbox()" class="backdrop-blur-md bg-slate-900/65 hover:bg-slate-900/90 text-white px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold border border-white/20 shadow-md flex items-center gap-1.5 transition-all hover:scale-105 whitespace-nowrap shrink-0">
+            <i class="fa-solid fa-expand text-sky-400"></i>
+            <span class="sm:hidden">Ampliar HD</span>
+            <span class="hidden sm:inline">Ver Foto Completa HD</span>
+          </button>
         </div>
 
-        <button onclick="openHeroLightbox()" class="backdrop-blur-md bg-slate-900/65 hover:bg-slate-900/90 text-white px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold border border-white/20 shadow-md flex items-center gap-1.5 transition-all hover:scale-105 whitespace-nowrap shrink-0">
-          <i class="fa-solid fa-expand text-sky-400"></i>
-          <span class="sm:hidden">Ampliar HD</span>
-          <span class="hidden sm:inline">Ver Foto Completa HD</span>
+        <!-- Flechas de navegación del carrusel panorámico -->
+        <button onclick="heroCarouselStep(-1)" aria-label="Foto anterior" class="absolute left-2.5 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-950/45 hover:bg-slate-950/75 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all">
+          <i class="fa-solid fa-chevron-left text-xs sm:text-sm"></i>
         </button>
-      </div>
+        <button onclick="heroCarouselStep(1)" aria-label="Foto siguiente" class="absolute right-2.5 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-950/45 hover:bg-slate-950/75 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all">
+          <i class="fa-solid fa-chevron-right text-xs sm:text-sm"></i>
+        </button>
 
-      <!-- Flechas de navegación del carrusel panorámico -->
-      <button onclick="heroCarouselStep(-1)" aria-label="Foto anterior" class="absolute left-2.5 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-950/45 hover:bg-slate-950/75 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all">
-        <i class="fa-solid fa-chevron-left text-xs sm:text-sm"></i>
-      </button>
-      <button onclick="heroCarouselStep(1)" aria-label="Foto siguiente" class="absolute right-2.5 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-950/45 hover:bg-slate-950/75 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all">
-        <i class="fa-solid fa-chevron-right text-xs sm:text-sm"></i>
-      </button>
-
-      <!-- Barra inferior discreta con título y contador -->
-      <div class="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 z-10 flex items-center justify-between gap-2">
-        <span id="hero-carousel-caption" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-white backdrop-blur-md bg-slate-950/60 border border-white/15 truncate">
-          <i class="fa-solid fa-camera text-sky-400 shrink-0"></i>
-          <span class="truncate">Vista Panorámica al Mar Caribe</span>
-        </span>
-        <span id="hero-carousel-counter" class="px-2.5 py-1 rounded-full text-[11px] font-bold text-white backdrop-blur-md bg-slate-950/60 border border-white/15 shrink-0">
-          1 / 6
-        </span>
+        <!-- Barra inferior discreta con título y contador -->
+        <div class="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 z-10 flex items-center justify-between gap-2">
+          <span id="hero-carousel-caption" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-white backdrop-blur-md bg-slate-950/60 border border-white/15 truncate">
+            <i class="fa-solid fa-camera text-sky-400 shrink-0"></i>
+            <span class="truncate">Vista Panorámica al Mar Caribe</span>
+          </span>
+          <span id="hero-carousel-counter" class="px-2.5 py-1 rounded-full text-[11px] font-bold text-white backdrop-blur-md bg-slate-950/60 border border-white/15 shrink-0">
+            1 / 6
+          </span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= TÍTULO Y PRESENTACIÓN DE LA PROPIEDAD ================= -->
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-2">
-    <div class="bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-sm text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-5 relative z-20 pb-3">
+    <div class="bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-lg text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between gap-5">
       <div>
         <span class="text-[11px] font-bold uppercase tracking-wider text-brand-600 block mb-0.5">
           Playa Moreno • Pampatar • Isla de Margarita
@@ -222,7 +224,7 @@
       </div>
 
       <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-        Inmueble amoblado y equipado con vista directa al mar en Playa Moreno, Conjunto Residencial La Arena (calle del Hotel Tibisay). Cuenta con:
+        Totalmente amoblado y equipado, cuenta con:
       </p>
 
       <!-- Grid de 12 comodidades principales -->

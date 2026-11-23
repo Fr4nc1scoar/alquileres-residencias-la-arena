@@ -446,6 +446,25 @@
     }, { passive: true });
   }
 
+  // Smooth scroll-shrink effect on Hero Photo Frame
+  const heroPhotoFrame = document.getElementById('hero-photo-frame');
+  if (heroPhotoFrame) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const progress = Math.min(Math.max(window.scrollY / 420, 0), 1);
+          const scale = 1 - progress * 0.09; // Shrinks smoothly from 1.00 to 0.91
+          const opacity = 1 - progress * 0.14;
+          heroPhotoFrame.style.transform = `scale(${scale.toFixed(4)})`;
+          heroPhotoFrame.style.opacity = opacity.toFixed(3);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
   // 9. Init
   renderState();
   renderGallery('todos');
