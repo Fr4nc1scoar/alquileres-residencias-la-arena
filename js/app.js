@@ -446,24 +446,41 @@
     }, { passive: true });
   }
 
-  // Smooth scroll-shrink effect on Hero Photo Frame
+  // Smooth scroll-shrink on Hero Photo Frame + Mobile Header Reveal after intro card
   const heroPhotoFrame = document.getElementById('hero-photo-frame');
-  if (heroPhotoFrame) {
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const progress = Math.min(Math.max(window.scrollY / 420, 0), 1);
-          const scale = 1 - progress * 0.09; // Shrinks smoothly from 1.00 to 0.91
-          const opacity = 1 - progress * 0.14;
-          heroPhotoFrame.style.transform = `scale(${scale.toFixed(4)})`;
-          heroPhotoFrame.style.opacity = opacity.toFixed(3);
-          ticking = false;
-        });
-        ticking = true;
+  const mainHeader = document.getElementById('main-header');
+  const propertyIntroCard = document.getElementById('property-intro-card');
+
+  function handleScrollEffects() {
+    if (heroPhotoFrame) {
+      const progress = Math.min(Math.max(window.scrollY / 420, 0), 1);
+      const scale = 1 - progress * 0.09; // Shrinks smoothly from 1.00 to 0.91
+      const opacity = 1 - progress * 0.14;
+      heroPhotoFrame.style.transform = `scale(${scale.toFixed(4)})`;
+      heroPhotoFrame.style.opacity = opacity.toFixed(3);
+    }
+
+    if (mainHeader && propertyIntroCard) {
+      const introBottom = propertyIntroCard.getBoundingClientRect().bottom;
+      if (introBottom < 20) {
+        mainHeader.classList.add('header-mobile-visible');
+      } else {
+        mainHeader.classList.remove('header-mobile-visible');
       }
-    }, { passive: true });
+    }
   }
+
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(() => {
+        handleScrollEffects();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
+  handleScrollEffects();
 
   // 9. Init
   renderState();

@@ -71,8 +71,8 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- ================= HEADER ULTRA-LIMPIO ================= -->
-  <header class="sticky top-0 z-50 glass border-b border-slate-200/80 shadow-xs">
+  <!-- ================= HEADER ULTRA-LIMPIO (EN MÓVIL APARECE AL BAJAR PASADA LA PORTADA) ================= -->
+  <header id="main-header" class="fixed lg:sticky top-0 left-0 right-0 z-50 glass border-b border-slate-200/80 shadow-xs transition-all duration-300 -translate-y-full opacity-0 pointer-events-none lg:translate-y-0 lg:opacity-100 lg:pointer-events-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Logo y Ubicación -->
@@ -153,8 +153,8 @@
   </section>
 
   <!-- ================= TÍTULO Y PRESENTACIÓN DE LA PROPIEDAD ================= -->
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-5 relative z-20 pb-3">
-    <div class="bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-lg text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+  <section id="property-intro-card" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-5 relative z-20 pb-3">
+    <div class="bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-lg text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-5">
       <div>
         <span class="text-[11px] font-bold uppercase tracking-wider text-brand-600 block mb-0.5">
           Playa Moreno • Pampatar • Isla de Margarita
@@ -167,13 +167,13 @@
         </p>
       </div>
 
-      <!-- Accesos Rápidos -->
+      <!-- Accesos Rápidos (en móvil evita duplicar WhatsApp ya presente en la barra inferior) -->
       <div class="flex flex-col gap-2 shrink-0">
         <a href="#modulos-directorio" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs shadow-xs text-center flex items-center justify-center gap-1.5 transition-all">
           <span>Ver Módulos & Precios</span>
           <i class="fa-solid fa-arrow-down text-[10px]"></i>
         </a>
-        <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20informaci%C3%B3n%20sobre%20el%20apartamento%20en%20Res.%20La%20Arena" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-xs text-center flex items-center justify-center gap-1.5 transition-all">
+        <a href="https://wa.me/584143336722?text=%C2%A1Hola!%20Deseo%20informaci%C3%B3n%20sobre%20el%20apartamento%20en%20Res.%20La%20Arena" target="_blank" class="hidden lg:flex px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-xs text-center items-center justify-center gap-1.5 transition-all">
           <i class="fa-brands fa-whatsapp text-sm"></i>
           <span>Consultar por WhatsApp</span>
         </a>
