@@ -389,7 +389,64 @@
     });
   }
 
-  // 8. Init
+  // 8. Panoramic Hero Carousel (6 horizontal 4:3 photos, uncropped)
+  const heroSlides = [
+    { src: 'images/vista-panoramica-mar.jpg', title: 'Vista Panorámica al Mar Caribe' },
+    { src: 'images/vista-general-social.jpg', title: 'Área Social Integrada' },
+    { src: 'images/sala-estar.jpg', title: 'Sala de Estar Confortable' },
+    { src: 'images/habitacion-principal.jpg', title: 'Suite Principal Matrimonial' },
+    { src: 'images/habitacion-2.jpg', title: 'Habitación Secundaria (2 Camas)' },
+    { src: 'images/vista-mar-tibisay.jpg', title: 'Vista al Mar y Playa Moreno' }
+  ];
+  let heroSlideIndex = 0;
+
+  function renderHeroSlide() {
+    const imgEl = document.getElementById('hero-carousel-img');
+    const captionEl = document.getElementById('hero-carousel-caption');
+    const counterEl = document.getElementById('hero-carousel-counter');
+    if (!imgEl) return;
+    const slide = heroSlides[heroSlideIndex];
+    imgEl.style.opacity = '0.6';
+    setTimeout(() => {
+      imgEl.src = slide.src;
+      imgEl.alt = slide.title;
+      if (captionEl) {
+        captionEl.innerHTML = `<i class="fa-solid fa-camera text-sky-400 shrink-0"></i><span class="truncate">${slide.title}</span>`;
+      }
+      if (counterEl) {
+        counterEl.textContent = `${heroSlideIndex + 1} / ${heroSlides.length}`;
+      }
+      imgEl.style.opacity = '1';
+    }, 100);
+  }
+
+  window.heroCarouselStep = function (delta) {
+    heroSlideIndex = (heroSlideIndex + delta + heroSlides.length) % heroSlides.length;
+    renderHeroSlide();
+  };
+
+  window.openHeroLightbox = function () {
+    if (typeof window.openLightboxBySrc === 'function') {
+      window.openLightboxBySrc(heroSlides[heroSlideIndex].src);
+    }
+  };
+
+  // Touch swipe on Hero Carousel
+  const heroImgEl = document.getElementById('hero-carousel-img');
+  if (heroImgEl) {
+    let touchStartX = 0;
+    heroImgEl.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    heroImgEl.addEventListener('touchend', (e) => {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        window.heroCarouselStep(diff < 0 ? 1 : -1);
+      }
+    }, { passive: true });
+  }
+
+  // 9. Init
   renderState();
   renderGallery('todos');
   initHashModule();

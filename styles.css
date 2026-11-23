@@ -58,42 +58,35 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* Panoramic Hero Viewport (Pure, Widescreen & Unobstructed) */
+/* Panoramic Hero Viewport (Full 4:3 Uncropped Aspect Ratio, Edge-to-Edge) */
 .panoramic-hero {
   position: relative;
   width: 100%;
-  height: 52vh;
-  min-height: 330px;
-  max-height: 680px;
+  aspect-ratio: 4 / 3;
+  max-height: 600px;
   overflow: hidden;
   background-color: #0f172a;
-}
-
-@media (min-width: 768px) {
-  .panoramic-hero {
-    height: 66vh;
-  }
 }
 
 .panoramic-hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 36%;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  object-position: center center;
+  transition: opacity 0.25s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   display: block;
 }
 
 .panoramic-hero:hover .panoramic-hero-img {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .panoramic-hero-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.0) 25%, rgba(15, 23, 42, 0.0) 70%, rgba(15, 23, 42, 0.45) 100%);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.28) 0%, rgba(15, 23, 42, 0.0) 22%, rgba(15, 23, 42, 0.0) 75%, rgba(15, 23, 42, 0.5) 100%);
 }
 
 /* Module Grid Cards (All 7 modules visible simultaneously, zero horizontal scrolling) */
